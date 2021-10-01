@@ -29,7 +29,6 @@ public class Bj1181_단어정렬 {
 		}
 
 		// 정렬 조건에 맞춰 정렬시키기
-
 		Comparator<String> comp = new Comparator<String>() {
 
 			@Override
