@@ -51,7 +51,6 @@ public class Bj10989 {
 
 			// 3단계 ) array배열의 i 번쨰 원소(value)를 인덱스로 하는 counting 배열의 값을 -1한 뒤 
 			// counting 배열의 값을 인덱스로 하여 result배열에 value값 저장.
-
 			int value = array[i];
 			counting[value]--;
 			result[counting[value]] = value;
