@@ -58,7 +58,7 @@ public class Bj2108 {
 		int maxValue = Collections.max(mp.values()); // 가장 큰 빈도수 구하기
 		ArrayList<Integer> arrayList = new ArrayList<>();
 		for (Map.Entry<Integer, Integer> m : mp.entrySet()) {
-			if (m.getValue() == maxValue) {
+			if (m.getValue() == maxValue) { //원소의 빈도 수가 가장큰빈도수와 같다면 해당 원소 arrayList에 추가.
 				arrayList.add(m.getKey());
 			}
 		}
