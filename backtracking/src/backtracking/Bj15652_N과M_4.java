@@ -34,7 +34,6 @@ public class Bj15652_N과M_4 {
 			for (int i = 0; i < M; i++) {
 				sb.append(arr[i] + " ");
 			}
-			sb.append("\n");
 			System.out.println(sb);
 		} else {
 			for (int i = 1; i <= N; i++) { // visit 체크 안하기 (숫자 중복 허용하도록)
