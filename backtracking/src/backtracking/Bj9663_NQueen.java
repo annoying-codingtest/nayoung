@@ -30,7 +30,7 @@ public class Bj9663_NQueen {
 		} else {
 			for (int i = 0; i < N; i++) {
 				chess[d] = i;
-				if (check(d)) { 
+				if (check(d)) { // 해당 열의 i번째 행에 퀸을 놓을 수 있는지 검사
 					nQueen(d + 1);
 				}
 			}
