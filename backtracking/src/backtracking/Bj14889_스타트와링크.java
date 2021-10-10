@@ -44,7 +44,7 @@ public class Bj14889_스타트와링크 {
 			diff_status();
 			return;
 		} else {
-			for (int i = idx; i < N; i++) { 
+			for (int i = idx; i < N; i++) {  //i=0부터 하면 시간초과
 				if (visit[i] == false) {
 					visit[i] = true;
 					dfs(i+1, d + 1);
