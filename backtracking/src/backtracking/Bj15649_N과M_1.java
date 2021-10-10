@@ -25,7 +25,7 @@ public class Bj15649_N과M_1 {
 	}
 
 	private static void dfs(int d) {
-
+		
 		StringBuilder sb = new StringBuilder();
 		if (d == M) {
 			for (int i = 0; i < M; i++) {
@@ -38,7 +38,6 @@ public class Bj15649_N과M_1 {
 					visit[i] = true;
 					arr[d] = i;
 					dfs(d + 1);
-					// 백트래킹
 					visit[i] = false;
 				}
 			}
