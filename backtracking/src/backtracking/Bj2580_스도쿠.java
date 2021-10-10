@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 public class Bj2580_½ºµµÄí {
 
-	public static int[][] arr = new int[9][9];
+	public static int[][] arr = new int[9][9]; 
 
 	public static void main(String[] args) throws IOException {
 
