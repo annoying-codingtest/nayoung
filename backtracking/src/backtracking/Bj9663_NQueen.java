@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 public class Bj9663_NQueen {
 	
 	private static int[] chess;
+	//인덱스가 열, 해당 원소 값이 행
 	public static int N;
 	public static int count = 0;
 
