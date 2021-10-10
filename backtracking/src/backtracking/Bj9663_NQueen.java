@@ -45,7 +45,7 @@ public class Bj9663_NQueen {
 				//열의 차 == 행의 차
 				return false;
 		}
-		return true; // 1열에 퀸을 놓았을때
+		return true; 
 	}
 
 }
