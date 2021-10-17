@@ -8,7 +8,6 @@ import java.util.Stack;
 
 public class Bj9012_°ýÈ£ {
 
-	static ArrayList<Integer> s = new ArrayList<>();
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
