@@ -109,7 +109,6 @@ public class Bj7569_≈‰∏∂≈‰2 {
 						return;
 					}
 					max = Math.max(max, map[h][i][j]);
-
 				}
 			}
 		}
