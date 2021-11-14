@@ -50,7 +50,7 @@ public class Bj7562_나이트의이동 {
 
 		Queue<Point> q = new LinkedList<>();
 
-		q.offer(points[0]);
+		q.offer(points[0]); // 시작점 좌표
 		check[points[0].x][points[0].y] = true;
 		count[points[0].x][points[0].y] = 0;
 
