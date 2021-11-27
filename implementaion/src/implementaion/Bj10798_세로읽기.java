@@ -7,7 +7,6 @@ import java.io.InputStreamReader;
 public class Bj10798_세로읽기 {
 
 	private static char[][] words;
-	private static int longword;
 	private static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws IOException {
@@ -17,7 +16,7 @@ public class Bj10798_세로읽기 {
 
 		words = new char[5][15];
 
-		longword = 0; // 5개의 단어들 중 가장 긴 단어의 길이
+		int longword = 0; // 5개의 단어들 중 가장 긴 단어의 길이
 		for (int i = 0; i < 5; i++) {
 			String s = br.readLine();
 
