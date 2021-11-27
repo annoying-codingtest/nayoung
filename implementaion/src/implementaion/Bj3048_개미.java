@@ -24,17 +24,17 @@ public class Bj3048_개미 {
 
 		String s = br.readLine();
 
-		//첫 번째 집단 개미 입력
+		//전진방향이 --> 첫 번째 개미 집단 입력
 		for (int i = N1 - 1; i >= 0; i--) { 
-			Ant ant = new Ant(s.charAt(i), '-');
+			Ant ant = new Ant(s.charAt(i), 'R');
 			ants.add(ant);
 		}
 
 		s = br.readLine();
 
-		//두 번째 집단 개미 입력
+		//전진방향이 <-- 두 번째 개미 집단 입력
 		for (int i = 0; i < N2; i++) { 
-			Ant ant = new Ant(s.charAt(i), '+');
+			Ant ant = new Ant(s.charAt(i), 'L');
 			ants.add(ant);
 		}
 
@@ -63,7 +63,7 @@ public class Bj3048_개미 {
 		for (int i = 0; i < ants.size() - 1; i++) {
 			pre = ants.get(i);
 			next = ants.get(i + 1);
-			if (pre.seq != next.seq) {
+			if (pre.seq=='R' && pre.seq != next.seq) { //전진방향이 LR인 경우 (<-- -->) 자기 앞에 개미가 있는 게 아니라서 바꿀 필요 없음
 				Ant temp = pre;
 
 				ants.set(i, next);
