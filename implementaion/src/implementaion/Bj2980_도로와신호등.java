@@ -29,39 +29,24 @@ public class Bj2980_도로와신호등 {
 
 		}
 
-		int T = 0;
-		int pos = 0;
-		while (pos < L) {
-			++T;
-			++pos;
+		int time = 0; // 이동 소요 시간.
+		for (int i = 1; i <= L; i++) {
+			time++; // 신호등 없는 곳 지날 때 1초씩 증가
 
-			if (d[pos] != null) { // 신호등이 있으면
-				int cycle = T % (d[pos].red + d[pos].green); //cycle <= 신호등의 빨간불값이면 기다렸다가 가야 하고, cycle > 빨간불값이면 그냥 갈 수 있음.
-				if (cycle <= d[pos].red) {
-					T = T + (d[pos].red - cycle);
+			if (d[i] != null) {
+				// 신호등이 있으면
+				int cycle = time % (d[i].red + d[i].green); // cycle <= 신호등의 빨간불값이면 기다렸다가 가야 하고, cycle > 빨간불값이면 그냥 갈 수
+															// 있음.
+				if (cycle <= d[i].red) {
+					time = time + (d[i].red - cycle);
 				}
 			}
 
 		}
-		
-		/*
-		  int time = 0; // 이동 소요 시간. 
-		  for (int i = 0; i < L; ++i) { 
-			  ++time; // 신호등 없는 곳 지날 때 1초씩 증가
-		  
-		  if (d[i] != null) { 
-			  // 신호등이 있으면 
-			  int cycle = time % (d[i].red + d[i].green); 
-			  if
-		  (cycle <= d[i].red) { time = time + (d[i].red - cycle); } }
-		  
-		  }
-		  
-		  */
 
-	System.out.println(T);
+		System.out.println(time);
 
-}
+	}
 
 }
 
