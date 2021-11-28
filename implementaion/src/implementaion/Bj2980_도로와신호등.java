@@ -36,7 +36,7 @@ public class Bj2980_도로와신호등 {
 			++pos;
 
 			if (d[pos] != null) { // 신호등이 있으면
-				int cycle = T % (d[pos].red + d[pos].green);
+				int cycle = T % (d[pos].red + d[pos].green); //cycle <= 신호등의 빨간불값이면 기다렸다가 가야 하고, cycle > 빨간불값이면 그냥 갈 수 있음.
 				if (cycle <= d[pos].red) {
 					T = T + (d[pos].red - cycle);
 				}
