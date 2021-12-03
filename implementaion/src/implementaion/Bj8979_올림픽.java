@@ -19,16 +19,13 @@ public class Bj8979_¿Ã¸²ÇÈ {
 		int K = Integer.parseInt(st.nextToken());
 
 		int[][] medals = new int[N + 1][3];
-		int[] totalScore = new int[N + 1];
 
-		Arrays.fill(totalScore, 0);
 
 		for (int i = 1; i <= N; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
 			int country = Integer.parseInt(st.nextToken());
 			for (int j = 0; j < 3; j++) {
 				medals[country][j] = 3 * Integer.parseInt(st.nextToken());
-				totalScore[country] += medals[country][j];
 			}
 		}
 
