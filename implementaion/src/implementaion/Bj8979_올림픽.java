@@ -25,7 +25,7 @@ public class Bj8979_¿Ã¸²ÇÈ {
 			st = new StringTokenizer(br.readLine(), " ");
 			int country = Integer.parseInt(st.nextToken());
 			for (int j = 0; j < 3; j++) {
-				medals[country][j] = 3 * Integer.parseInt(st.nextToken());
+				medals[country][j] = Integer.parseInt(st.nextToken());
 			}
 		}
 
