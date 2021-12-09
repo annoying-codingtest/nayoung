@@ -87,7 +87,6 @@ public class Bj1063_Å· {
 			case "T": // ÇÑ Ä­ À§·Î
 				if (kingY > 0) {
 					kingY--;
-
 					if (kingX == stoneX && kingY == stoneY) {
 						if (stoneY > 0) {
 							stoneY--;
