@@ -11,6 +11,7 @@ class Node {
 		this.data = val;
 		lt = rt = null;
 	}
+
 }
 
 public class Bj1991_트리순회 {
