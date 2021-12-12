@@ -4,10 +4,11 @@ import java.util.*;
 import java.io.*;
 
 public class Bj11725_트리의부모찾기 {
+
 	private static int n;
 	private static int[] parent;
 	private static boolean[] visited;
-	private static ArrayList<Integer>[] tree;
+	private static ArrayList<Integer>[] tree; //Map으로는 안되는지
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
