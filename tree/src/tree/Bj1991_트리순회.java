@@ -49,7 +49,7 @@ public class Bj1991_트리순회 {
 
 	public static void preOrder(String data) {
 
-		if (tree.get(data) == null || data == ".") {
+		if (tree.get(data) == null) {
 			return;
 		} else {
 			System.out.print(tree.get(data).data);
@@ -62,7 +62,7 @@ public class Bj1991_트리순회 {
 
 	public static void inOrder(String data) {
 
-		if (tree.get(data) == null || data == ".") {
+		if (tree.get(data) == null) {
 			return;
 		} else {
 			inOrder(tree.get(data).lt);
@@ -75,7 +75,7 @@ public class Bj1991_트리순회 {
 
 	public static void postOrder(String data) {
 
-		if (tree.get(data) == null || data == ".") {
+		if (tree.get(data) == null) {
 			return;
 		} else {
 			postOrder(tree.get(data).lt);
