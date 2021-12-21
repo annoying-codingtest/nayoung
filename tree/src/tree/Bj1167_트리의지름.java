@@ -3,19 +3,9 @@ package tree;
 import java.util.*;
 import java.io.*;
 
-class Node2 {
-	int nx;
-	int info;
-
-	public Node2(int nx, int info) {
-		this.nx = nx;
-		this.info = info;
-	}
-}
-
 public class Bj1167_트리의지름 {
 
-	private static ArrayList<Node2>[] tree;
+	private static ArrayList<Node>[] tree;
 	private static boolean[] ch;
 	private static int dia = 0;
 
@@ -42,27 +32,37 @@ public class Bj1167_트리의지름 {
 				int v2 = Integer.parseInt(s[j]);
 				int line = Integer.parseInt(s[j++]);
 
-				tree[v].add(new Node2(v2, line));
+				tree[v].add(new Node(v2, line));
 
 			}
 
 		}
 
-		DFS(1,0);
+		DFS(1, 0);
 		System.out.println(dia);
 
 	}
 
 	private static void DFS(int a, int w) {
-		
-		for (Node2 v : tree[a]) {
+
+		for (Node v : tree[a]) {
 			if (ch[v.nx]) {
 				continue;
 			} else {
 				ch[v.nx] = true;
-				DFS(v.nx, w+v.info);
+				DFS(v.nx, w + v.info);
 			}
 
+		}
+	}
+
+	static class Node {
+		int nx;
+		int info;
+
+		public Node(int nx, int info) {
+			this.nx = nx;
+			this.info = info;
 		}
 	}
 
