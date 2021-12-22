@@ -11,18 +11,17 @@ public class Bj1012_유기농배추 {
 	private static int map[][];
 	private static boolean check[][];
 
-	private static int[] dx = { -1, 1, 0, 0 }; // 하나의 좌표기준 상하좌우를 살피기 위한 x,y배열
-	private static int[] dy = { 0, 0, -1, 1 };
+	private static int[] dx = { 0, 0, -1, 1 }; // 하나의 좌표기준 상하좌우를 살피기 위한 x,y배열
+	private static int[] dy = { 1, -1, 0, 0 };
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 
 		int T = Integer.parseInt(br.readLine());
 		StringTokenizer st;
-
-		StringBuilder sb = new StringBuilder();
 
 		for (int tc = 0; tc < T; tc++) {
 			st = new StringTokenizer(br.readLine(), " ");
@@ -40,14 +39,14 @@ public class Bj1012_유기농배추 {
 
 			}
 
-			int count = 0;
+			int count = 0; //에벌레 수를 셀 변수
 
 			for (int i = 0; i < M; i++) {
 				for (int j = 0; j < N; j++) {
-					// dfs 조건
 					if (map[i][j] == 1 && check[i][j] != true) {
+						check[i][j]=true;
 						dfs(i, j);
-						// 하나의 집단을 찾고 나면 애벌레 수++;
+						// 하나의 인접집단을 찾고 나면 애벌레 수++;
 						count++;
 					}
 				}
@@ -60,8 +59,6 @@ public class Bj1012_유기농배추 {
 	}
 
 	public static void dfs(int x, int y) {
-		check[x][y] = true;
-
 		// 상하좌우 탐색
 		for (int i = 0; i < 4; i++) {
 			int nx = x + dx[i];
@@ -69,6 +66,7 @@ public class Bj1012_유기농배추 {
 
 			if (nx >= 0 && ny >= 0 && nx < M && ny < N) {
 				if (map[nx][ny] == 1 && check[nx][ny] != true) {
+					check[nx][ny]=true;
 					dfs(nx, ny);
 				}
 			}
